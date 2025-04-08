@@ -1,10 +1,10 @@
-var http = require('http');
-var fs = require('fs');
-var url = require('url');
+let http = require('http');
+let fs = require('fs');
+let url = require('url');
 
 http.createServer(function(req,res){
-    var q = url.parse(req.url , true);
-    var fileName = '.' + q.pathname;
+    let q = url.parse(req.url , true);
+    let fileName = '.' + q.pathname;
     fs.readFile(fileName , function(err , data){
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/html'});
