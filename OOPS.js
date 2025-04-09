@@ -247,3 +247,15 @@ You can use them without creating an object.
     console.log(c instanceof Animal)
     console.log(c instanceof Object)
 }
+
+{
+    //Constructor always points towards class/object that created it.
+    function Person(name) {
+        this.name = name;
+      }
+      
+      const p = new Person("John");
+      
+      console.log(p.constructor);         // [Function: Person]
+      console.log(p.constructor === Person); // true 
+}      
