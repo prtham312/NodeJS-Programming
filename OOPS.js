@@ -263,3 +263,24 @@ You can use them without creating an object.
       console.log(clone.name);
 
 }      
+
+{
+    //Object create through proto
+    //Object.create makes
+    /* 
+    Pure prototypal inheritance
+    Great for lightweight object patterns
+    Avoids constructor syntax when unnecessary
+    */
+    const animal = {
+        speak() {
+          console.log(`${this.name} makes a sound`);
+        }
+      };
+      
+      const dog = Object.create(animal);
+      dog.name = "Rex";
+      dog.speak(); // Rex makes a sound
+
+      
+}
