@@ -108,6 +108,8 @@
     // extends is used for make child class from parent class
     // super is used for calling properties in child class from parent class
     //this cannot be used in child class before declaring super()
+    //Method overriding is possible
+    //after overriding we can still use previous function through super.methodname()
 
 class Car{
     constructor(colour , speed){
@@ -135,4 +137,6 @@ const E = new BMW("red" , 220 , "E-Class" , 1973 )
 E.explain(); 
 
 }
+
+
 
