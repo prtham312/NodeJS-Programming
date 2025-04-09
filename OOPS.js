@@ -235,3 +235,15 @@ You can use them without creating an object.
       console.log(duck.swim()); 
       
 }
+
+{
+    //InstanceOf Property
+    //To check the actual type of an object at runtime.
+
+    class Animal{}
+    class Cat extends Animal{}
+    const c = new Cat();
+    console.log(c instanceof Cat)
+    console.log(c instanceof Animal)
+    console.log(c instanceof Object)
+}
