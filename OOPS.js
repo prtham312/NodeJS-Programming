@@ -140,3 +140,30 @@ E.explain();
 
 
 
+{
+    //Encapsulation
+    // Private properties are specified by #
+    class Bank {
+        constructor(name){
+            this.name = name;
+        }
+
+        #balance = 0 //private property
+        deposit(amount){
+            if(amount>0) 
+                {
+                    this.#balance+=amount
+                }
+            else console.log("Not enough amount , Try Again")
+        }
+
+        getBalance(){
+            return this.#balance
+        }
+    }
+    const holder = new Bank("Anik")
+    holder.deposit(1000);
+    holder.deposit(0);
+    console.log(holder.getBalance());
+    console.log(holder.balance) //here it will print undefined as private members cannot be accessed.
+}
