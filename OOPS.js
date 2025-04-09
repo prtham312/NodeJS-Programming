@@ -281,6 +281,30 @@ You can use them without creating an object.
       const dog = Object.create(animal);
       dog.name = "Rex";
       dog.speak(); // Rex makes a sound
+}
 
-      
+{
+//closure
+/*
+When you define a function inside another function,
+     and the inner function uses variables from the outer function, then the inner function "closes over" those variables.
+Even if the outer function is done executing, the inner function remembers those variables and can still access them.
+*/
+function outer() {
+    let count = 0; // outer variable
+  
+    function inner() {
+      count++;           // uses outer variable
+      return count;
+    }
+  
+    return inner;         // return inner function
+  }
+  
+  const counter = outer(); // outer() executes and returns inner
+  console.log(counter()); // 1
+  console.log(counter()); // 2
+  
+
+
 }
