@@ -143,6 +143,7 @@ E.explain();
 {
     //Encapsulation
     // Private properties are specified by #
+    //Before #, developers used _ to show "don't touch this" , This is not truly private — it's just a convention.
     class Bank {
         constructor(name){
             this.name = name;
@@ -183,4 +184,24 @@ E.explain();
       const s = new SecretBox();
       console.log(s.reveal());     // Hidden Treasure!
     //console.log(s.#openSecret()); //Gives error because opensecret is private method
+}
+
+
+{
+    //Static
+/*
+Belong to the class itself, not the instances (objects) of the class.
+You can use them without creating an object.
+*/
+
+    class MyClass {
+        static myStaticMethod() {
+          return "I belong to the class";
+        }
+      }
+
+      MyClass.myStaticMethod(); //Works
+        const obj = new MyClass();
+        obj.myStaticMethod();     //Error: not a function
+
 }
