@@ -202,6 +202,36 @@ You can use them without creating an object.
 
       MyClass.myStaticMethod(); //Works
         const obj = new MyClass();
-        obj.myStaticMethod();     //Error: not a function
+        // obj.myStaticMethod();     //Error: not a function
 
+}
+
+{
+    //Composition
+    //Favor composition over inheritance” — especially in JavaScript where functions and objects are flexible.
+
+    const canFly = {
+        fly() {
+          return `${this.name} is flying!`;
+        }
+      };
+      
+      const canSwim = {
+        swim() {
+          return `${this.name} is swimming!`;
+        }
+      };
+      
+      function createDuck(name) {
+        return {
+          name,
+          ...canFly,
+          ...canSwim
+        };
+      }
+      
+      const duck = createDuck("Donald");
+      console.log(duck.fly()); 
+      console.log(duck.swim()); 
+      
 }
