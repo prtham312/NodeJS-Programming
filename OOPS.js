@@ -334,3 +334,49 @@ function outer() {
       }
       
 }
+{
+    //Practise questoin in cluding all topics
+
+    class Shape{
+        constructor(name){
+            if(this.name===Shape){
+                throw new Error("Cannot instantiate abstract class Shape");
+            }
+            this.name = name;
+        }
+        draw(){
+            throw new Error("Shape has to be forced to draw as per method")
+        }
+    }
+    class Circle extends Shape{
+        #radius;
+        constructor(radius){
+            super("Circle")
+            this.radius = radius
+        }
+        draw(){
+            console.log(`Area of ${this.name} is ${22.7*this.radius*this.radius}`)
+        }
+    }
+    class Rectangle extends Shape{
+        #width;
+        #height;
+      
+        constructor(width, height) {
+          super("Rectangle");
+          this.#width = width;
+          this.#height = height;
+        }
+      
+        draw() {
+          console.log(`Drawing a ${this.name} of size ${this.#width}x${this.#height} is ${this.#width*this.#height}`);
+        }
+    }
+
+    const shapes = [
+        new Circle(5),
+        new Rectangle(10, 20)
+      ];
+      
+      shapes.forEach(shape => shape.draw());
+}
