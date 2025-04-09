@@ -167,3 +167,20 @@ E.explain();
     console.log(holder.getBalance());
     console.log(holder.balance) //here it will print undefined as private members cannot be accessed.
 }
+{
+
+    //Private Methods in class
+    class SecretBox {
+        #openSecret() {
+          return "Hidden Treasure!";
+        }
+      
+        reveal() {
+          return this.#openSecret(); // allowed inside
+        }
+      }
+      
+      const s = new SecretBox();
+      console.log(s.reveal());     // Hidden Treasure!
+    //console.log(s.#openSecret()); //Gives error because opensecret is private method
+}
