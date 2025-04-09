@@ -305,6 +305,32 @@ function outer() {
   console.log(counter()); // 1
   console.log(counter()); // 2
   
+}
 
-
+{
+    //Polymorphism
+    class Animal {
+        speak() {
+          console.log("Animal speaks");
+        }
+      }
+      
+      class Dog extends Animal {
+        speak() {
+          console.log("Dog barks");
+        }
+      }
+      
+      class Cat extends Animal {
+        speak() {
+          console.log("Cat meows");
+        }
+      }
+      
+      const animals = [new Dog(), new Cat(), new Animal()];
+      
+      for (let a of animals) {
+        a.speak();
+      }
+      
 }
