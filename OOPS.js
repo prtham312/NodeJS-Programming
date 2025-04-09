@@ -73,6 +73,7 @@
 
 
     //Prototype
+    //Instead of copying the function to every object, all instances share the same method, saving memory.
     function Person(name){
         this.name = name;
 
@@ -97,4 +98,5 @@
         If still not found, look in Object.prototype
     */
 
+        //in class methods and functions are itself prototypes , js define them as prototype
 }
