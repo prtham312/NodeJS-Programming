@@ -100,3 +100,39 @@
 
         //in class methods and functions are itself prototypes , js define them as prototype
 }
+
+{
+    //Inheritance
+    //JS does not support multiple inheritance unlike C++ and ptyhon.
+    //We can achieve it through mixins.
+    // extends is used for make child class from parent class
+    // super is used for calling properties in child class from parent class
+    //this cannot be used in child class before declaring super()
+
+class Car{
+    constructor(colour , speed){
+        this.colour = colour;
+        this.speed = speed;
+        }
+
+    vroom() {
+        console.log(`That car in ${this.colour} is running at a speed of ${this.speed}`)
+    }
+    }
+
+class BMW extends Car{
+    constructor(colour ,speed ,Model ,Year){
+        super(colour , speed);
+        this.Model= Model;
+        this.Year =Year
+    }
+
+    explain() {
+            console.log(`That ${this.colour} car is ${this.Model},${this.Year} and running at a speed of ${this.speed}`)
+    }
+}
+const E = new BMW("red" , 220 , "E-Class" , 1973 )
+E.explain(); 
+
+}
+
