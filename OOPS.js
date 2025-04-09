@@ -258,4 +258,8 @@ You can use them without creating an object.
       
       console.log(p.constructor);         // [Function: Person]
       console.log(p.constructor === Person); // true 
+
+      const clone = new p.constructor("Mike");
+      console.log(clone.name);
+
 }      
