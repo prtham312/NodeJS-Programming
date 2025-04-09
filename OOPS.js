@@ -19,4 +19,9 @@
     let p2 = new Person("Diwas" , 16);
     console.log(p1.greet());
     console.log(p2.isAge());
+
+    //Dynamic object update
+    p2.name = "Raj";
+    console.log(p2.name);
+
 }
