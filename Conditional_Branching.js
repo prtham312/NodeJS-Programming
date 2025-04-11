@@ -52,3 +52,21 @@ else console.log("Login Now")
     }
     else console.log(`Acess Denied!! You're late or don't have admin role.`)
 }
+
+{
+    //Switch Statement
+
+    let fruit = 'Strawberry'
+
+    switch(fruit){
+        case 'Apple':
+            console.log('Fruit is Apple');
+            break;
+        case 'Strawberry':
+            console.log('Strawberry is fruit.');
+            break;
+        default : 
+        console.log('unknown fruit');
+        break;
+    }
+}
