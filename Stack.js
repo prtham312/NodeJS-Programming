@@ -56,3 +56,17 @@ console.log(el1.isEmpty());
     console.log(isBalanced('{([])}'));
     console.log(isBalanced('{([]}'));
 }
+
+{
+    //Reverse a string using Stack
+    
+    function Rev(str){
+        const stack = str.split('');
+        let rev= "";
+        while(stack.length>0){
+            rev+=stack.pop()
+        }
+        return rev;
+    }
+console.log(Rev("Hello"))
+    }
