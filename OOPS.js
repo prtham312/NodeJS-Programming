@@ -352,10 +352,10 @@ function outer() {
         #radius;
         constructor(radius){
             super("Circle")
-            this.radius = radius
+            this.#radius = radius
         }
         draw(){
-            console.log(`Area of ${this.name} is ${22.7*this.radius*this.radius}`)
+            console.log(`Area of ${this.name} is ${22.7*this.#radius*this.#radius}`)
         }
     }
     class Rectangle extends Shape{
