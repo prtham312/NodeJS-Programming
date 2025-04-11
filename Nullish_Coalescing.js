@@ -26,7 +26,7 @@ function getUserMessage(user) {
     name: "John",
     isLoggedIn: false
   }));
-  // "Please log in to view notifications"
+  // User has to login to view notification
   
   console.log(getUserMessage({
     name: "Amy",
@@ -38,7 +38,7 @@ function getUserMessage(user) {
       notifyBySMS: false
     }
   }));
-  // "Notification sent to amy@example.com"
+  // Notification sent to user email id
   
   console.log(getUserMessage({
     name: "Bob",
@@ -50,7 +50,7 @@ function getUserMessage(user) {
       notifyBySMS: true
     }
   }));
-  // "Notification sent to 1234567890"
+  // Notification sent to user phone number
   
   console.log(getUserMessage({
     name: "Eve",
@@ -62,5 +62,5 @@ function getUserMessage(user) {
       notifyBySMS: true
     }
   }));
-  // "No valid contact info available"
+  // No proper contact info available
   
