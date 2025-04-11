@@ -25,3 +25,16 @@
     }
     console.log(arr_sum([1,2,3,4,5,6]))
 }
+
+
+{
+    //reverse a string using recursion
+    function str_rev(string){
+        string=string.trim();
+        if(string === "") return "Invalid String";
+        if(string.length===1) return string;
+        return str_rev(string.slice(1)) + string[0];
+    }
+    console.log(str_rev("Anik"))
+    console.log(str_rev("               "))
+}
