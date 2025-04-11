@@ -38,3 +38,17 @@ else console.log("Login Now")
     let category = age > 10 ? age>18 ? "Adult" : "Teen" : "Kid"
     console.log(category)
 }
+
+
+{
+    //Logical operators in conditioning
+    let CurrentHour = new Date().getHours();
+    let user = {
+        isLoggedIn : true , 
+        isAdmin : true
+    }
+    if(user.isLoggedIn && user.isAdmin && CurrentHour >= 9 && CurrentHour <= 17){
+        console.log(`Hello Admin , You logged in at ${CurrentHour}`)
+    }
+    else console.log(`Acess Denied!! You're late or don't have admin role.`)
+}
