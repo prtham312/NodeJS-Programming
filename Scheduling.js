@@ -7,3 +7,12 @@ let id1 = setInterval(() => {console.log("This message will be displayed after e
 setTimeout(() => {clearInterval(id1);
                 console.log("Clear Interval will be stoped after 10 secs , means id1 will work for 4 times")
 } , 10000)
+
+{
+    let count = 0;
+    let id = setInterval(() => {console.log(`Hi! my count is ${count+1}`) ;
+    ++count;
+    if(count == 5) clearInterval(id)
+}
+,1000)
+}
