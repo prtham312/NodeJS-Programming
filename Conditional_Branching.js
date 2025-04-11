@@ -24,3 +24,11 @@ if(user.isLoggedIn){
 }
 else console.log("Login Now")
 }
+
+
+{
+    // Ternary Operator
+    let speed = 10;
+    let status = speed > 100 ? "Too Fast" : "Good to GO"
+    console.log(status)
+}
