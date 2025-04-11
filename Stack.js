@@ -36,3 +36,23 @@ console.log(el.isEmpty());
 console.log(el.peek());
 console.log(el1.isEmpty());
 }
+
+
+{
+    //Check for balanced paranthesis
+    function isBalanced(str){
+        let stack = [];
+        const map = { ')' : '(' , '}' : '{' , ']' : '['}
+        for(let char of str){
+            if([ '(' , '{' , '['].includes(char)){
+                stack.push(char);
+            }
+            else if([')', '}' , ']'].includes(char)){
+                if(stack.pop() !== map[char]) return false;
+            }
+        }
+            return stack.length===0;
+    }
+    console.log(isBalanced('{([])}'));
+    console.log(isBalanced('{([]}'));
+}
