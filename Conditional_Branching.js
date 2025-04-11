@@ -31,4 +31,10 @@ else console.log("Login Now")
     let speed = 10;
     let status = speed > 100 ? "Too Fast" : "Good to GO"
     console.log(status)
+
+
+    //Nested Ternary
+    let age = 19
+    let category = age > 10 ? age>18 ? "Adult" : "Teen" : "Kid"
+    console.log(category)
 }
