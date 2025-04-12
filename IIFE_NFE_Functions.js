@@ -1,6 +1,8 @@
 //IIFE stands for immediately Invoked Function Expression
 //as this function is invoked by itself it is used for private scope , such as encapsulation
 
+const { constants } = require("buffer");
+
 
 
 (function(){
@@ -24,3 +26,12 @@ const Factorial = function fact(n){
 }
 console.log(Factorial(3)) //Here factorial function is used , fact cant be accessed here.
 // console.log(fact(3)) //Stating error that fact is not defined.
+
+
+//Practice question on IIFE and NFE
+
+//Calculating square of a number
+
+;(function(num){
+    console.log(Math.pow(num,2))
+})(2);   //if function shows console.log is not defined , just put ';' as it will avoid overwritten.
