@@ -6,3 +6,10 @@
 (function(){
     console.log("Hello")
 })();
+
+
+//Function with Parameters
+
+(function(a,b){
+    console.log(a+b);
+})(3,4)
