@@ -52,3 +52,23 @@ counter.increment(); // +1
 counter.decrement(); // -1
 console.log(counter.getcount());
 console.log(counter.count)
+
+
+//NFE with Retry Logic
+
+const tryTask = function retry(n){
+    if (n === 0) {
+        console.log("Failed after 3 attempts.");
+        return;
+      }
+    
+      const success = Math.random() > 0.5;
+    
+      if (success) {
+        console.log("Task succeeded!");
+      } else {
+        console.log(`Retrying... attempts left: ${n - 1}`);
+        retry(n - 1);
+      }
+}
+tryTask(3);
