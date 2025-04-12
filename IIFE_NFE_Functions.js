@@ -35,3 +35,20 @@ console.log(Factorial(3)) //Here factorial function is used , fact cant be acces
 ;(function(num){
     console.log(Math.pow(num,2))
 })(2);   //if function shows console.log is not defined , just put ';' as it will avoid overwritten.
+
+
+//IIFE with closure counter
+
+const counter = (function(){
+    let count = 0;
+    return {
+        increment() { return count++},
+        decrement() { return count--},
+        getcount() {return count}
+    }
+})()
+counter.increment(); // +1
+counter.increment(); // +1
+counter.decrement(); // -1
+console.log(counter.getcount());
+console.log(counter.count)
