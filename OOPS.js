@@ -304,8 +304,9 @@ function outer() {
   const counter = outer(); // outer() executes and returns inner
   console.log(counter()); // 1
   console.log(counter()); // 2
+  console.log(counter())
   
-  
+
 }
 
 {
