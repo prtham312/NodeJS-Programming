@@ -328,8 +328,14 @@ function outer() {
           console.log("Cat meows");
         }
       }
+
+      class Bird extends Animal{
+        speak(){
+          console.log("Bird chirps")
+        }
+      }
       
-      const animals = [new Dog(), new Cat(), new Animal()];
+      const animals = [new Dog(), new Cat(), new Animal() , new Bird()];
       
       for (let a of animals) {
         a.speak();
