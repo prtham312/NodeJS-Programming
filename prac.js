@@ -25,3 +25,9 @@ for(let i = 0 ; i< arr.length ; i++){
     } 
 }
 console.log(count)
+
+setTimeout(() => {
+    console.log('Hello after 3 seconds!');
+  }, 3000);
+  console.log('This runs first');
+  
