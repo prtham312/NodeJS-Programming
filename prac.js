@@ -31,3 +31,7 @@ setTimeout(() => {
   }, 3000);
   console.log('This runs first');
   
+{
+    "use strict";
+    x = 3.2;
+}
