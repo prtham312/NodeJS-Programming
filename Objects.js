@@ -14,5 +14,9 @@
     console.log(user.hasOwnProperty("city"))
     for(let [key,value] of Object.entries(user)){
             console.log(`${key} has value : ${value}`)
-    }
+    } 
+    let Descr = function () {
+        console.log(`${user.name} is of ${user.age} years old!` )  //reference of object should be given
+     }
+     Descr(); //no need to give object name for function call
 }
