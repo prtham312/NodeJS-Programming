@@ -32,5 +32,11 @@ console.log(res)
    
 }
 
-
+{
+    //Remove all the numbers and punctuations from a string
+    function clean(str){
+        return str.toLowerCase().replace(/[^a-z]/g , '').split('').sort().join('')
+    }
+    console.log(clean("HE1!0"))
+}
 
