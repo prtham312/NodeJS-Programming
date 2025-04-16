@@ -41,3 +41,24 @@
         console.log(i.id)
     }
 }
+
+{
+    //Object Assign
+    const user = {
+        anik : 22,
+        diwas : 21 ,
+        dhruv : 23
+    }
+    let user1 = Object.assign({} , user) //through object.assign() property
+    let user2 = { ... user} // through spread operator
+    user1.anik = 23;
+    user2.dhruv = 25;
+    console.log(user);
+    console.log(user1);
+    console.log(user2);
+    // const {anik , dhruv} = {user1,user2} //will be undefine because both have diffrent properties
+    const {anik} = user1;
+    const{dhruv} = user2;2
+    console.log(anik);
+    console.log(dhruv)
+}
