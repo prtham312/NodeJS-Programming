@@ -3,6 +3,10 @@
         name : "Anik",
         age : 22,
         city : "Mumbai",
+        family : {
+            house : "Indore",
+            language : "Hindi"
+        }
     }
     console.log(user.name);
     console.log(user.age);
@@ -19,4 +23,5 @@
         console.log(`${user.name} is of ${user.age} years old!` )  //reference of object should be given
      }
      Descr(); //no need to give object name for function call
+     console.log(user.family.language)
 }
