@@ -1,0 +1,15 @@
+{
+    const user = {
+        name : "Anik",
+        age : 22,
+        city : "Mumbai",
+    }
+    console.log(user.name);
+    console.log(user.age);
+    console.log(user.city)
+    user.gender = "Male"
+    console.log(user.gender);
+    delete user.city
+    console.log(user.city)
+    console.log(user.hasOwnProperty("city"))
+}
