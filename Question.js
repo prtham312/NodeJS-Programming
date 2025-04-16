@@ -7,7 +7,6 @@ for(let i =0 ; i<arr.length ; i++){
         res.push(Array(arr[i] + "," + arr[j]))
     }
 }
-let res1 = Array.from(res)
 console.log(res)
 
 
@@ -21,9 +20,15 @@ console.log(res)
     
     for (let i =0 ; i< arr1.length ; i++) {
         let count = arr1[i].size;
-        if(count == 2) console.log(`${Array.from(arr[i]).join('')} : 2`);
-       else console.log(`${Array.from(arr[i]).join('')} : ${2* count}`);
+        let el = Array.from(arr[i]).join('')
+        console.log(`${el} : ${factorial(count)}`);
+       
     }
+    function factorial(n){
+        if(n===0 || n===1) return 1;
+        return n * factorial(n-1);
+    }
+    console.log(factorial(5))
    
 }
 
