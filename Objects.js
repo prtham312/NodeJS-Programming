@@ -79,4 +79,6 @@
     }
     console.log(Object.entries(user)); 
     console.log(JSON.stringify(user , null , 2)) //if want to print all the thing including nested objects and array , null is for depth , 2 is for spaces identation for better readability`
+    console.log(Object.values(user)); 
+    console.log(Object.entries(user));
 }
