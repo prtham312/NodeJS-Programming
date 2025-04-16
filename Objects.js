@@ -12,4 +12,7 @@
     delete user.city
     console.log(user.city)
     console.log(user.hasOwnProperty("city"))
+    for(let [key,value] of Object.entries(user)){
+            console.log(`${key} has value : ${value}`)
+    }
 }
