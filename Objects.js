@@ -74,4 +74,9 @@
     console.log(user?.country?.city?.Address) //optianal chaining is used here it will return the value if present
     console.log(user?.country?.city?.Addresses) //as here value wasnt there it returned undefine , didn't give error
     console.log(user.resides())
+    for(let [i,j] of Object.entries(user)){
+        console.log(i + " : " + j)
+    }
+    console.log(Object.entries(user)); 
+    console.log(JSON.stringify(user , null , 2)) //if want to print all the thing including nested objects and array , null is for depth , 2 is for spaces identation for better readability`
 }
