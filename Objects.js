@@ -28,3 +28,16 @@
      console.log(name)
      console.log(house)
 }
+
+{
+    //Array of Objects
+    let arr = [
+        { name: "Alice", id: 1 },
+        { name: "Bob", id: 2 },
+        { name: "Charlie", id: 3 }
+    ]
+    for(let i of arr){
+        console.log(i.name)
+        console.log(i.id)
+    }
+}
