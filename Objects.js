@@ -19,7 +19,7 @@
     for(let [key,value] of Object.entries(user)){
             console.log(`${key} has value : ${value}`)
     } 
-    let Descr = function () {
+    let Descr = function () { //function outside object
         console.log(`${user.name} is of ${user.age} years old!` )  //reference of object should be given
      }
      Descr(); //no need to give object name for function call
@@ -54,6 +54,9 @@
                 city_name : "Indore",
                 Address : "Palasia"
             }
+        },
+        resides : function () {
+            return `${this.anik} aged guy lost in location ${this.country.city.Address} `
         }
     }
     let user1 = Object.assign({} , user) //through object.assign() property
@@ -70,4 +73,5 @@
     console.log(dhruv)
     console.log(user?.country?.city?.Address) //optianal chaining is used here it will return the value if present
     console.log(user?.country?.city?.Addresses) //as here value wasnt there it returned undefine , didn't give error
+    console.log(user.resides())
 }
