@@ -40,3 +40,31 @@ console.log(res)
     console.log(clean("HE1!0"))
 }
 
+{
+    //Longest Substring Without Repeating Characters
+    let str = "abcdedsascdw";
+
+    function lenstr(str) {
+        let maxCount = 0;
+    
+        for (let i = 0; i < str.length; i++) {
+            let str1 = "";
+            let count = 0;
+            for (let j = i; j < str.length; j++) {
+                if (str1.includes(str[j])) {
+                    break;
+                } else {
+                    count++;
+                    str1 += str[j];
+                }
+            }
+            if (count > maxCount) {
+                maxCount = count;
+            }
+        }
+        console.log(maxCount);
+    }
+    
+    lenstr(str); 
+    
+}
