@@ -47,7 +47,14 @@
     const user = {
         anik : 22,
         diwas : 21 ,
-        dhruv : 23
+        dhruv : 23,
+        country : {
+            state : "Madhya Pradesh",
+            city : {
+                city_name : "Indore",
+                Address : "Palasia"
+            }
+        }
     }
     let user1 = Object.assign({} , user) //through object.assign() property
     let user2 = { ... user} // through spread operator
@@ -61,4 +68,6 @@
     const{dhruv} = user2;2
     console.log(anik);
     console.log(dhruv)
+    console.log(user?.country?.city?.Address) //optianal chaining is used here it will return the value if present
+    console.log(user?.country?.city?.Addresses) //as here value wasnt there it returned undefine , didn't give error
 }
