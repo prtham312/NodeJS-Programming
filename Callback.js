@@ -18,3 +18,11 @@ Greet("Anik" , sayHi)}
         console.log("Maza Ma?")
     })
 }
+
+//Callbacks are useful in asynchronous code, like when making API calls, reading files, or waiting for a timer.
+{
+    //Callbacks in Settimeout()
+    setTimeout(function(){
+        console.log("This message has been printed through callback after 2 seconds")
+    } , 2000)   
+}
