@@ -59,3 +59,36 @@ Greet("Anik" , sayHi)}
     })
     console.log(even)
 }
+
+{
+    //sum of all elements using reduce
+    let arr = [ 1,2,3,4,5,6,7,8,9 ]
+    let res = arr.reduce(function(num,acc){
+        return num+acc
+    },0)
+    console.log(res)
+}
+{
+    //Capitalize the first letter of each word in a string.
+    let str = "first letter of each word is going to be capitalized in this statement "
+    let words = str.split(" ")
+    let res = words.map(function(word){
+        return word.charAt(0).toUpperCase() + word.slice(1)
+    })
+    console.log(res.join(" "));
+}
+
+{
+    function capitalizeWords(str) {
+        return str
+          .split(" ")
+          .map(function(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+          })
+          .join(" ");
+      }
+      
+      console.log(capitalizeWords("hello world from js")); 
+      // "Hello World From Js"
+      
+}
