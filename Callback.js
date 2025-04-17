@@ -41,3 +41,12 @@ Greet("Anik" , sayHi)}
     )
 // Here as this function has been fetched , callback will be implemented after this.
 }
+
+
+{
+    //Double each number using map
+    let arr = [1,2,3,4,5]
+    arr.map(function(num){
+        console.log(num*2)
+    })
+}
