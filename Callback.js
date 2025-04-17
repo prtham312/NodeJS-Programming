@@ -26,3 +26,18 @@ Greet("Anik" , sayHi)}
         console.log("This message has been printed through callback after 2 seconds")
     } , 2000)   
 }
+
+
+{
+    //Basic functioning of API in callbacks
+    function Data(callback){
+        console.log('Data has been Processed')
+        callback();
+    }
+    Data(function
+        (){
+            console.log("Data has been fetched succesfully")
+        }
+    )
+// Here as this function has been fetched , callback will be implemented after this.
+}
