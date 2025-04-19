@@ -53,3 +53,16 @@ login("admin" , "admins" , handlelogin)
         }
         Transform(names , print)
     }
+
+
+    {
+        //Search Users with Substring and Callbacks
+        const users = ["tech_guy", "admin_123", "codergirl", "superadmin"];
+        function print(name){
+            console.log(name)
+        }
+        function Search(users , callback){
+            users.forEach(item => {if(item.includes("admin")) {callback(item)}})
+        }
+        Search(users , print)
+    }
