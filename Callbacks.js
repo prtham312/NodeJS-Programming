@@ -1,4 +1,4 @@
-function login(user , password , callback){
+{function login(user , password , callback){
     if(user  && password ){
         console.log("Validating.....")
     }
@@ -24,3 +24,18 @@ function handlelogin(error , message){
 }
 
 login("admin" , "admins" , handlelogin)
+}
+
+{
+    //array of users has valid users or not
+    const credentials = [
+        { user: "admin", password: "admin" },
+        { user: "", password: "admin" },
+        { user: "admin", password: "wrong" }
+      ];
+    credentials.forEach(item=>{
+        if(item.user) console.log("valid")
+            else console.log("invalid")
+    })
+
+}
