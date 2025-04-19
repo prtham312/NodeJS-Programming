@@ -39,3 +39,17 @@ login("admin" , "admins" , handlelogin)
     })
 
 }
+
+{
+    //Transform and Log Using Callback
+    const names = ["alice", "bob", "charlie"];
+    function print(name){
+        console.log(name)
+    }
+    function Transform(names , callback){
+        
+            let changes = names.map(item => item.charAt(0).toUpperCase() + item.slice(1))
+            changes.forEach(callback)
+        }
+        Transform(names , print)
+    }
