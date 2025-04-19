@@ -5,7 +5,7 @@
     else {
         console.log('Not a valid user or password')
     }
-    setTimeout( ()=>{
+    setTimeout( ()=>{  //setTimeOut has been implemented 
         if(user=="admin" && password=="admin"){
             callback(null , "succesfull login")
         }
